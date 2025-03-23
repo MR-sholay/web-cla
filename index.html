@@ -97,6 +97,9 @@
         function playRound(playerChoice) {
             const computerChoice = getComputerChoice();
             let result = '';
+		
+            playerSelectionDisplay.textContent = capitalizeFirstLetter(playerChoice);
+            computerSelectionDisplay.textContent = capitalizeFirstLetter(computerChoice);
 
             if (playerChoice === computerChoice) {
                 result = `It's a tie! Both chose ${capitalizeFirstLetter(playerChoice)}.`;
